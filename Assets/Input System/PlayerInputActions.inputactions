@@ -7,21 +7,21 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "71df93a8-1781-4350-8e1d-a3e22fca2514",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Look",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "2eb042b4-30d5-472e-929d-178d7bf11c8e",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Primary Fire",
@@ -35,20 +35,64 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "1c737ab6-91de-4116-a419-e9f5ab95cb4e",
-                    "path": "",
+                    "name": "2D Vector",
+                    "id": "a6526028-ca1c-4d06-b27e-1817bd37d5d3",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "4306dd7e-9e7a-43eb-91d9-47ec4309e094",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "e00ea2f0-db61-43af-afb8-21f667e37742",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "af9fff0c-daa7-42ee-b791-b652ff515583",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "af801368-2343-4fa3-8724-f47a86c37ff6",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "e6e96bfd-945e-4047-9309-a10ab4378c32",
-                    "path": "",
+                    "id": "3c10f3e3-b012-456a-ae65-39fab6e2f096",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -58,8 +102,8 @@
                 },
                 {
                     "name": "",
-                    "id": "4fa5e2e5-ab2f-4f45-b743-0b98c583a223",
-                    "path": "",
+                    "id": "1358ea9a-7efe-4244-ac07-8c57b8e1890a",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
