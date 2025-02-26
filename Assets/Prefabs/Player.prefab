@@ -141,9 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18cf350d58fd3ba4482d8e83be99e8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   inputReader: {fileID: 11400000, guid: 9c2d8ffc61a30d1419870475863149c4, type: 2}
-  moveSpeed: 5
   rb: {fileID: 8502038093887844414}
+  moveSpeed: 13
 --- !u!50 &8502038093887844414
 Rigidbody2D:
   serializedVersion: 5
