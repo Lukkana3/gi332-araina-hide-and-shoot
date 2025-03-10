@@ -7,7 +7,7 @@ using static PlayerInputActions;
 public class InputReader : ScriptableObject, IPlayerActions
 {
     public event Action<Vector2> MoveEvent;
-    public event Action<Vector2> LookEvent;
+    public Vector2 LookPosition { get; private set; } //เพิ่มตัวแปรนี้
     public event Action<bool> PrimaryFireEvent;
 
     private PlayerInputActions controls;
@@ -35,7 +35,7 @@ public class InputReader : ScriptableObject, IPlayerActions
 
     public void OnLook(InputAction.CallbackContext context)
     {
-        LookEvent?.Invoke(context.ReadValue<Vector2>());
+        LookPosition = context.ReadValue<Vector2>(); //บันทึกค่าตำแหน่งเมาส์
     }
 
     public void OnPrimaryFire(InputAction.CallbackContext context)
