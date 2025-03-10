@@ -25,11 +25,11 @@ Transform:
   m_GameObject: {fileID: 163761870463847169}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.389, y: 4.671, z: 0}
+  m_LocalPosition: {x: 0.15, y: 4.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3106717081473529098}
+  m_Father: {fileID: 355023130332186496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5769611589009963373
 GameObject:
@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8885379193841358704}
   - component: {fileID: 6999614580853403212}
   - component: {fileID: 8502038093887844414}
+  - component: {fileID: 3717833781069572490}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -65,7 +66,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 355023130332186496}
-  - {fileID: 5767163459715549248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1212898888338904169
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  inputReader: {fileID: 11400000, guid: 9c2d8ffc61a30d1419870475863149c4, type: 2}
+  inputReader: {fileID: 11400000, guid: cf513217b667e2a48be7b88544c271ea, type: 2}
   rb: {fileID: 8502038093887844414}
   gunTransform: {fileID: 355023130332186496}
   moveSpeed: 13
@@ -173,6 +173,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3717833781069572490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5769611589009963373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e196ae0b4331b498dc8cf0e1cbde58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  bulletPrefab: {fileID: 7345269394063870831, guid: cdfbf8b973a979445a28f5983a7a2bfa, type: 3}
+  firePoint: {fileID: 5767163459715549248}
+  inputReader: {fileID: 11400000, guid: cf513217b667e2a48be7b88544c271ea, type: 2}
 --- !u!1 &8660844126308017266
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +222,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5767163459715549248}
   m_Father: {fileID: 3106717081473529098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &824931256324499299
