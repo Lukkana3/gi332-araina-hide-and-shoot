@@ -1212,6 +1212,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4723194772648356312, guid: 26bf8606906dbb848b2af5a7b6139ba4, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 1962807822
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723194772648356312, guid: 26bf8606906dbb848b2af5a7b6139ba4, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 3069782745
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889715090432486059, guid: 26bf8606906dbb848b2af5a7b6139ba4, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2461085654
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889715090432486059, guid: 26bf8606906dbb848b2af5a7b6139ba4, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 3069782745
+      objectReference: {fileID: 0}
     - target: {fileID: 5769611589009963373, guid: 26bf8606906dbb848b2af5a7b6139ba4, type: 3}
       propertyPath: m_Name
       value: Player
