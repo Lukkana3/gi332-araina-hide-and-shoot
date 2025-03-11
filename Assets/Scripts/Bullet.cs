@@ -36,10 +36,16 @@ public class Bullet : NetworkBehaviour
     {
         if (!IsServer) return;
 
+        Debug.Log("Bullet hit: " + other.gameObject.name);
+
         if (other.CompareTag("Player"))
         {
             Debug.Log("Hit Player!");
-            // สามารถเพิ่มระบบลด HP ตรงนี้ได้
+
+            if (other.TryGetComponent<PlayerHealth>(out PlayerHealth playerHealth))
+            {
+                playerHealth.TakeDamageServerRpc(10); // ลด HP 10
+            }
         }
 
         DestroyBullet();
