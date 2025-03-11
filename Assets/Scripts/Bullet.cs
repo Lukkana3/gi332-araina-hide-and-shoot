@@ -38,16 +38,25 @@ public class Bullet : NetworkBehaviour
 
         Debug.Log("Bullet hit: " + other.gameObject.name);
 
+        // ตรวจสอบว่าชน Player หรือไม่
         if (other.CompareTag("Player"))
         {
             Debug.Log("Hit Player!");
 
             if (other.TryGetComponent<PlayerHealth>(out PlayerHealth playerHealth))
             {
-                playerHealth.TakeDamageServerRpc(10); // Ŵ HP 10
+                playerHealth.TakeDamageServerRpc(10); // ลด HP 10
             }
         }
 
+        // ตรวจสอบว่าชนกำแพงหรือไม่ (Layer "Wall")
+        if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        {
+            Debug.Log("Bullet hit Wall! Destroying bullet.");
+            DestroyBullet(); // ทำลายกระสุน
+        }
+
+        // ทำลายกระสุนหลังจากโดน Player หรือ กำแพง
         DestroyBullet();
     }
 }
