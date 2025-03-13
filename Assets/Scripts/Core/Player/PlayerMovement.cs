@@ -64,8 +64,7 @@ public class PlayerMovement : NetworkBehaviour
 
         Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePosition);
         Vector2 direction = (worldMousePos - transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        gunTransform.rotation = Quaternion.Euler(0f, 0f, angle);
+        gunTransform.up = direction;
     }
 }
 
