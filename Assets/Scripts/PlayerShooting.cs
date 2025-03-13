@@ -12,7 +12,7 @@ public class PlayerShooting : NetworkBehaviour
         // ตรวจสอบว่า inputReader ถูกกำหนดค่าหรือไม่
         if (inputReader == null)
         {
-            inputReader = FindObjectOfType<InputReader>();
+            inputReader = Object.FindFirstObjectByType<InputReader>();
             if (inputReader == null)
             {
                 Debug.LogError("InputReader not found in the scene! Please assign it in the Inspector.");
