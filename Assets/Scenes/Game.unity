@@ -595,7 +595,7 @@ MonoBehaviour:
     rid: 4989628012064669781
   m_ShadowCastingSource: 2
   m_ShadowMesh:
-    m_Mesh: {fileID: 1376937630}
+    m_Mesh: {fileID: 1628538342}
     m_LocalBounds:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0.33999634, y: 0.8799896, z: 0}
@@ -615,7 +615,7 @@ MonoBehaviour:
     - rid: 4989628012064669781
       type: {class: ShadowShape2DProvider_Collider2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
       data: 
---- !u!43 &1376937630
+--- !u!43 &1628538342
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
