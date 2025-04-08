@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767163459715549248}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9193854459355054311}
   - component: {fileID: 6549646409620405145}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 6523811230904480425}
   - component: {fileID: 6246861317238872809}
   - component: {fileID: 1052586213935656414}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 188985859093069912}
   - component: {fileID: 6690374559603787074}
   - component: {fileID: 492362952774892477}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: HealthBarBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 6889416475403809928}
   - component: {fileID: 1926733404430664587}
   - component: {fileID: 5902249388921582664}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -674,7 +674,7 @@ GameObject:
   - component: {fileID: 2710964328755154130}
   - component: {fileID: 2443185431467662245}
   - component: {fileID: 4374656663053822594}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 3741998499267670596}
   - component: {fileID: 9025497212480358603}
   - component: {fileID: 179738799981622814}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1051,7 +1051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 76658118311202926}
   - component: {fileID: 1258699080327872186}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
