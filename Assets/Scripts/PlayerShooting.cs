@@ -1,55 +1,88 @@
-using Unity.Netcode;
+Ôªøusing Unity.Netcode;
 using UnityEngine;
 
 public class PlayerShooting : NetworkBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private InputReader inputReader; // µ√«® Õ∫«Ë“ inputReader ¡’§Ë“À√◊Õ‰¡Ë
+    [SerializeField] private InputReader inputReader;
 
     private void Awake()
     {
-        // µ√«® Õ∫«Ë“ inputReader ∂Ÿ°°”Àπ¥§Ë“À√◊Õ‰¡Ë
         if (inputReader == null)
         {
             inputReader = FindObjectOfType<InputReader>();
             if (inputReader == null)
             {
-                Debug.LogError("InputReader not found in the scene! Please assign it in the Inspector.");
+                Debug.LogError("[PlayerShooting] ‚ùå InputReader not found in scene!");
             }
+            else
+            {
+                Debug.Log("[PlayerShooting] ‚úÖ InputReader found automatically.");
+            }
+        }
+        else
+        {
+            Debug.Log("[PlayerShooting] ‚úÖ InputReader assigned via Inspector.");
         }
     }
 
     private void OnEnable()
     {
         if (inputReader != null)
+        {
             inputReader.PrimaryFireEvent += HandleFire;
+            Debug.Log("[PlayerShooting] ‚úÖ Subscribed to PrimaryFireEvent.");
+        }
         else
-            Debug.LogError("InputReader is missing in PlayerShooting!");
+        {
+            Debug.LogError("[PlayerShooting] ‚ùå InputReader is null on Enable.");
+        }
     }
 
     private void OnDisable()
     {
         if (inputReader != null)
+        {
             inputReader.PrimaryFireEvent -= HandleFire;
+            Debug.Log("[PlayerShooting] üîå Unsubscribed from PrimaryFireEvent.");
+        }
     }
 
     private void HandleFire(bool isFiring)
     {
-        if (!isFiring || !IsOwner) return;
+        if (!IsOwner)
+        {
+            Debug.Log("[PlayerShooting] ‚õî Not owner, ignore fire input.");
+            return;
+        }
 
-        // ‡√’¬°„ÀÈ‡´‘√Ïø‡«Õ√Ï √È“ß°√– ÿπ
+        if (!isFiring) return;
+
+        Debug.Log("[PlayerShooting] üî´ Firing requested!");
+
+        // ‡∏ö‡∏≠‡∏Å Server ‡πÉ‡∏´‡πâ‡∏™‡∏£‡πâ‡∏≤‡∏á‡∏Å‡∏£‡∏∞‡∏™‡∏∏‡∏ô
         FireServerRpc(firePoint.position, firePoint.up);
     }
 
     [ServerRpc]
     private void FireServerRpc(Vector2 position, Vector2 direction)
     {
+        Debug.Log($"[Server] üî® Spawning bullet at {position} with direction {direction}");
+
         GameObject bullet = Instantiate(bulletPrefab, position, Quaternion.identity);
         NetworkObject bulletNetworkObject = bullet.GetComponent<NetworkObject>();
-        bulletNetworkObject.Spawn(); // ´‘ß§Ï°√– ÿπ‰ª¬—ß‰§≈‡ÕπµÏ∑ÿ°µ—«
+        bulletNetworkObject.Spawn();
 
         Bullet bulletScript = bullet.GetComponent<Bullet>();
-        bulletScript.SetDirectionServerRpc(direction);
+        if (bulletScript != null)
+        {
+            bulletScript.SetDirectionServerRpc(direction);
+            Debug.Log("[Server] ‚úÖ Bullet direction set.");
+        }
+        else
+        {
+            Debug.LogError("[Server] ‚ùå Bullet script not found on bullet prefab!");
+        }
     }
 }

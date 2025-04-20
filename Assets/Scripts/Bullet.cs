@@ -11,57 +11,74 @@ public class Bullet : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         if (IsServer)
+        {
             Invoke(nameof(DestroyBullet), lifeTime);
+            Debug.Log("[Bullet] 🟢 Bullet spawned on Server.");
+        }
     }
 
     [ServerRpc]
     public void SetDirectionServerRpc(Vector2 dir)
     {
         direction.Value = dir;
+        Debug.Log($"[Bullet] 📡 Direction set via ServerRpc: {dir}");
     }
 
     private void Update()
     {
         if (!IsSpawned) return;
+
         transform.position += (Vector3)(direction.Value * speed * Time.deltaTime);
     }
 
     private void DestroyBullet()
     {
         if (IsServer)
+        {
+            Debug.Log("[Bullet] 🔴 Bullet destroyed.");
             NetworkObject.Despawn();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!IsServer) return;
 
-        Debug.Log("Bullet hit: " + other.gameObject.name);
+        Debug.Log($"[Bullet] 💥 Hit: {other.gameObject.name}");
 
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Hit Player!");
+            Debug.Log("[Bullet] 🎯 Hit Player!");
 
             if (other.TryGetComponent<NetworkObject>(out var targetNetObj))
             {
-                NetworkObject bulletNetObj;
-                if (TryGetComponent<NetworkObject>(out bulletNetObj))
+                if (TryGetComponent<NetworkObject>(out var bulletNetObj))
                 {
-                    if (bulletNetObj != null)
+                    if (targetNetObj.TryGetComponent<PlayerHealth>(out var playerHealth))
                     {
-                        if (targetNetObj.TryGetComponent<PlayerHealth>(out var playerHealth))
-                        {
-                            playerHealth.TakeDamageServerRpc(10); // ลดเลือด 10
-                        }
+                        playerHealth.TakeDamageServerRpc(10);
+                        Debug.Log("[Bullet] ➖ Called TakeDamageServerRpc(10)");
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[Bullet] ⚠️ PlayerHealth component not found on Player!");
                     }
                 }
+                else
+                {
+                    Debug.LogWarning("[Bullet] ⚠️ Bullet missing NetworkObject.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("[Bullet] ⚠️ Player target missing NetworkObject.");
             }
         }
 
         // ถ้าโดนกำแพง
         if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
-            Debug.Log("Bullet hit Wall! Destroying bullet.");
+            Debug.Log("[Bullet] 🧱 Hit Wall. Destroying bullet.");
         }
 
         DestroyBullet(); // กระสุนหายเมื่อชนอะไรก็ตาม
