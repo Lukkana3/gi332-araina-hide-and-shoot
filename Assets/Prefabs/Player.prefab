@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5767163459715549248}
   m_Layer: 0
   m_Name: FirePoint
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6549646409620405145}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,9 +238,9 @@ GameObject:
   - component: {fileID: 6999614580853403212}
   - component: {fileID: 8502038093887844414}
   - component: {fileID: 3717833781069572490}
-  - component: {fileID: 6523811230904480425}
   - component: {fileID: 6246861317238872809}
   - component: {fileID: 1052586213935656414}
+  - component: {fileID: 2883064578142929001}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -387,21 +387,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7345269394063870831, guid: cdfbf8b973a979445a28f5983a7a2bfa, type: 3}
   firePoint: {fileID: 5767163459715549248}
   inputReader: {fileID: 11400000, guid: cf513217b667e2a48be7b88544c271ea, type: 2}
---- !u!114 &6523811230904480425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5769611589009963373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d6d74de3d8db4a4b9988ed5f981f3d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  maxHealth: 100
-  healthBar: {fileID: 4374656663053822594}
 --- !u!60 &6246861317238872809
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -468,6 +453,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   offset: {x: 0, y: 0, z: -10}
+--- !u!114 &2883064578142929001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5769611589009963373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6d74de3d8db4a4b9988ed5f981f3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  maxHealth: 100
+  healthBar: {fileID: 4374656663053822594}
 --- !u!1 &5861829667908768229
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   maxHealth: 100
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4374656663053822594}
 --- !u!1 &8625338611507834695
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 179738799981622814}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 1258699080327872186}
   m_Layer: 0
   m_Name: Light 2D
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

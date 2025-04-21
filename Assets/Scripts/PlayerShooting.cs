@@ -66,13 +66,16 @@ public class PlayerShooting : NetworkBehaviour
     [ServerRpc]
     private void FireServerRpc(Vector2 position, Vector2 direction)
     {
-        Debug.Log($"[Server] 🔨 Spawning bullet at {position} with direction {direction}");
+        Debug.Log($"[Server] 🔫 Spawning bullet at {position} dir {direction}");
 
         GameObject bullet = Instantiate(bulletPrefab, position, Quaternion.identity);
-        NetworkObject bulletNetworkObject = bullet.GetComponent<NetworkObject>();
-        bulletNetworkObject.Spawn();
+        NetworkObject bulletNetObj = bullet.GetComponent<NetworkObject>();
 
-        Bullet bulletScript = bullet.GetComponent<Bullet>();
+        bulletNetObj.Spawn(false); // 🔥 ไม่มี Owner เพราะเป็น Server ยิง
+        bullet.GetComponent<Bullet>().SetDirectionServerRpc(direction);
+    
+
+    Bullet bulletScript = bullet.GetComponent<Bullet>();
         if (bulletScript != null)
         {
             bulletScript.SetDirectionServerRpc(direction);
