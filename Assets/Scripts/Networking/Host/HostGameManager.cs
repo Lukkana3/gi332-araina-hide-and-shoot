@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class HostGameManager
 {
     private Allocation allocation;
-    private string joinCode;
+    public string JoinCode;
     private const int MaxConnections = 20;
     private const string GameSceneName = "Game";
 
@@ -28,8 +28,8 @@ public class HostGameManager
 
         try
         {
-            joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
-            Debug.Log(joinCode);
+            JoinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+            Debug.Log(JoinCode);
         }
         catch (Exception e)
         {

@@ -11,14 +11,14 @@ public class PlayerShooting : NetworkBehaviour
     {
         if (inputReader == null)
         {
-            inputReader = FindObjectOfType<InputReader>();
+            inputReader = FindFirstObjectByType<InputReader>();
             if (inputReader == null)
             {
                 Debug.LogError("[PlayerShooting] ❌ InputReader not found in scene!");
             }
             else
             {
-                Debug.Log("[PlayerShooting] ✅ InputReader found automatically.");
+                Debug.Log("[PlayerShooting] ✅ Found InputReader using FindFirstObjectByType.");
             }
         }
         else
@@ -60,8 +60,6 @@ public class PlayerShooting : NetworkBehaviour
         if (!isFiring) return;
 
         Debug.Log("[PlayerShooting] 🔫 Firing requested!");
-
-        // บอก Server ให้สร้างกระสุน
         FireServerRpc(firePoint.position, firePoint.up);
     }
 
