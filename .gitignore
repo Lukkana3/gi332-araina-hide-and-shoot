@@ -71,3 +71,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Scripts/PlayerShooting.cs.meta
+Assets/Scripts/PlayerShooting.cs
+*.cs
+*.meta
+*.cs
+*.cs
+*.meta
