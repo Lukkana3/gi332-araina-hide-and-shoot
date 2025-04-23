@@ -50,15 +50,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -76.13756
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.759399
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.255915
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_LocalRotation.w
@@ -105,6 +105,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1591325719392172476}
+    - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6591314612331875524}
   m_SourcePrefab: {fileID: 100100000, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
 --- !u!1 &1501688046061628633 stripped
 GameObject:
@@ -180,7 +183,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -218,3 +221,16 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!114 &-6591314612331875524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501688046061628633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a895ded7244f040bd9a29c7d50a2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

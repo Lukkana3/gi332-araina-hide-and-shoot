@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -76.13756
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.759399
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.255915
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_LocalRotation.w
@@ -68,7 +68,7 @@ PrefabInstance:
       addedObject: {fileID: 964057139157402680}
     - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7358083060362508129}
+      addedObject: {fileID: 9137272463845445980}
     - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8964410939321013763}
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b224974643f7f4b8160e7717532deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7358083060362508129
+--- !u!114 &9137272463845445980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2121456448
+  GlobalObjectIdHash: 1939587782
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
