@@ -577,13 +577,13 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   inputReader: {fileID: 11400000, guid: cf513217b667e2a48be7b88544c271ea, type: 2}
   projectileSpawnPoint: {fileID: 5767163459715549248}
-  serverProjectilePrefab: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+  serverProjectilePrefab: {fileID: 5276902428648787953, guid: db91c0d240c4503459b39fd5a67b2e03, type: 3}
   clientProjectilePrefab: {fileID: 1501688046061628633, guid: 068c0875b434e0e4d831fad27929eae6, type: 3}
   muzzleFlash: {fileID: 3161833220393155366}
   playerCollider: {fileID: 1023932116268227264}
-  projectileSpeed: 400
-  fireRate: 15
-  muzzleFlashDuration: 0.05
+  projectileSpeed: 50
+  fireRate: 1
+  muzzleFlashDuration: 0.2
 --- !u!1 &5861829667908768229
 GameObject:
   m_ObjectHideFlags: 0
