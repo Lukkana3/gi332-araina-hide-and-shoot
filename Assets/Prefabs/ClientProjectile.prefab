@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4858551296472174849, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247194908936076254, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247194908936076254, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5247194908936076254, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.5
@@ -92,6 +104,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClientProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945792186995071334, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -105,9 +125,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1591325719392172476}
-    - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -6591314612331875524}
   m_SourcePrefab: {fileID: 100100000, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
 --- !u!1 &1501688046061628633 stripped
 GameObject:
@@ -221,16 +238,3 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &-6591314612331875524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501688046061628633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a895ded7244f040bd9a29c7d50a2cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10

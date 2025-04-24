@@ -8,9 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4858551296472174849, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4036616683318476577, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4626485535722010872, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 383892716
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247194908936076254, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247194908936076254, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,6 +72,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ServerProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945792186995071334, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -63,9 +87,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1328402318324730901}
-    - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 964057139157402680}
     - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 3c079b8c3e04d5e498d0a3cbe6dc1a36, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9137272463845445980}
@@ -105,18 +126,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &964057139157402680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5276902428648787953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b224974643f7f4b8160e7717532deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9137272463845445980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,4 +163,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a895ded7244f040bd9a29c7d50a2cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
+  damage: 10
