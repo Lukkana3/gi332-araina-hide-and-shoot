@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4858551296472174849, guid: 8bcd0ba7331b8a44e9132cb0c9c5f95c, type: 3}
+      propertyPath: lifetime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4858551296472174849, guid: 8bcd0ba7331b8a44e9132cb0c9c5f95c, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -113,4 +117,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a895ded7244f040bd9a29c7d50a2cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 5
