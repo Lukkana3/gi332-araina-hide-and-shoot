@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4858551296472174849, guid: 8bcd0ba7331b8a44e9132cb0c9c5f95c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7651564466790426036, guid: 8bcd0ba7331b8a44e9132cb0c9c5f95c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ServerProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 8945792186995071334, guid: 8bcd0ba7331b8a44e9132cb0c9c5f95c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -59,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 8bcd0ba7331b8a44e9132cb0c9c5f95c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4949260586269329993}
+    - targetCorrespondingSourceObject: {fileID: 8658349208991797726, guid: 8bcd0ba7331b8a44e9132cb0c9c5f95c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7378086805301350301}
   m_SourcePrefab: {fileID: 100100000, guid: 8bcd0ba7331b8a44e9132cb0c9c5f95c, type: 3}
 --- !u!1 &8505555682888219021 stripped
 GameObject:
@@ -72,7 +83,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8505555682888219021}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
@@ -90,3 +101,16 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!114 &7378086805301350301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8505555682888219021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a895ded7244f040bd9a29c7d50a2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
