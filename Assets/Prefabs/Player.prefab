@@ -668,6 +668,7 @@ GameObject:
   - component: {fileID: -2627306223777312088}
   - component: {fileID: 8225321393432275807}
   - component: {fileID: 554313243338238752}
+  - component: {fileID: 5480555944802065025}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -731,7 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   NetworkTransformExpanded: 0
-  AuthorityMode: 1
+  AuthorityMode: 0
   TickSyncChildren: 0
   UseUnreliableDeltas: 0
   SyncPositionX: 1
@@ -833,6 +834,7 @@ MonoBehaviour:
   projectileSpeed: 50
   fireRate: 1
   muzzleFlashDuration: 0.8
+  costToFire: 0
 --- !u!114 &8225321393432275807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,7 +864,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  virtualCamera: {fileID: 0}
   <Health>k__BackingField: {fileID: 8225321393432275807}
+--- !u!114 &5480555944802065025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5769611589009963373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e652fc9defe4687409b6fde8ec06078b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
 --- !u!1 &8660844126308017266
 GameObject:
   m_ObjectHideFlags: 0

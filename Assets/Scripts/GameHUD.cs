@@ -17,7 +17,7 @@ public class GameHUD : NetworkBehaviour
             lobbyCode.OnValueChanged += HandleLobbyCodeChanged;
             HandleLobbyCodeChanged(string.Empty, lobbyCode.Value);
         }
-
+ 
         if (!IsHost) { return; }
 
         lobbyCode.Value = HostSingleton.Instance.GameManager.JoinCode;
