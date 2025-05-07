@@ -1,16 +1,11 @@
-
 using System.Threading.Tasks;
 
 using Unity.Services.Authentication;
 
 using UnityEngine;
 
-
-
 public enum AuthState
-
 {
-
     NotAuthenticated,
 
     Authenticating,
@@ -20,35 +15,19 @@ public enum AuthState
     Error,
 
     TimeOut
-
 }
 
-
-
 public static class AuthenticationWrapper
-
 {
-
     public static AuthState AuthState { get; private set; } = AuthState.NotAuthenticated;
 
     public static async Task<AuthState> DoAuth(int maxRetries = 5)
-
     {
-
         if (AuthState == AuthState.Authenticated)
-
         {
-
             return AuthState;
-
         }
-
-
-
         AuthState = AuthState.Authenticating;
-
-
-
         int retries = 0;
 
         while (AuthState == AuthState.Authenticating && retries < maxRetries)
