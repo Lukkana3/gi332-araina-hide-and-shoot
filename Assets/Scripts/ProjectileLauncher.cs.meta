@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 35a552c2e5ed3bb4782ed812d10829eb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - inputReader: {instanceID: 0}
+  - projectileSpawnPoint: {instanceID: 0}
+  - serverProjectilePrefab: {instanceID: 0}
+  - clientProjectilePrefab: {instanceID: 0}
+  - muzzleFlash: {instanceID: 0}
+  - playerCollider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
